@@ -21,10 +21,10 @@ ActiveRecord::Schema.define(version: 2020_06_10_195201) do
     t.text "description"
     t.boolean "done"
     t.datetime "due_date"
-    t.integer "user_id"
+    t.integer "author_id"
     t.integer "category_id"
+    t.index ["author_id"], name: "index_tasks_on_author_id"
     t.index ["category_id"], name: "index_tasks_on_category_id"
-    t.index ["user_id"], name: "index_tasks_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

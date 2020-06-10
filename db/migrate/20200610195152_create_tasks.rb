@@ -5,7 +5,7 @@ class CreateTasks < ActiveRecord::Migration[5.2]
       t.text :description
       t.boolean :done
       t.datetime :due_date
-      t.belongs_to :user
+      t.belongs_to :author
       t.belongs_to :category
     end
   end
